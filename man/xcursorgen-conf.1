@@ -1,0 +1,25 @@
+.\" Manpage for xcursorgen-conf.
+.\" Contact jfvtraining@gmail.com to correct errors or typos.
+.TH man 1 "01 April 2022" "0.1" "xcursorgen-conf"
+.SH NAME
+xcursorgen-conf \- creates a configuration file for xcursorgen
+.SH SYNOPSYS
+xcursorgen-conf [directory 1] [directory 2] [directory 3] [...]
+.SH DESCRIPTION
+xcursorgen-conf automatically creates configuration files for xcursorgen by listing the PNG files contained in the directories passed as arguments. Should no directory be passed as an argument, xcursorgen-conf will look for the current working directory. The images found will be sorted by size, and the program will prompt for hotspot coordinates for each cursor size. The coordinates and frame duration will then be batch applied, unless one activates manual override. Once the configuration file is saved, xcursorgen-conf offers the option to run xcursorgen and build the cursor for you.
+.SH OPTIONS
+No options available.
+.SH EXAMPLES
+xcursorgen-conf default_cursor/16px default_cursor/32px default_cursor/48px default_cursor/64px
+.LP
+xcursorgen-conf /home/user/Documents/Cursors/New_Cursor
+.LP
+xcursorgen-conf ./
+.LP
+xcursorgen-conf
+.SH SEE ALSO
+xcursorgen(1), xcursor(3)
+.SH BUGS
+No known bugs. However, xcursorgen filepaths should contain no spaces. If the path to the images contain spaces, it is recommended to navigate to the directory containing the images and then run the command using the ./ path.
+.SH AUTHOR
+Jonathan F.V. (jfvtraining@gmail.com)
